@@ -1,0 +1,153 @@
+/* 引入 Century Gothic 字体 */
+@font-face {
+    font-family: 'Century Gothic';
+    src: url('fonts/GOTHIC.TTF') format('truetype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Century Gothic';
+    src: url('fonts/GOTHICB.TTF') format('truetype');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Century Gothic';
+    src: url('fonts/GOTHICI.TTF') format('truetype');
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Century Gothic';
+    src: url('fonts/GOTHICBI.TTF') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* 基础样式 */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background: url('bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Century Gothic', sans-serif;
+    color: #fff;
+}
+
+/* 时间和日期 */
+.time-date {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.time {
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.date {
+    font-size: 28px;
+    font-weight: normal;
+}
+
+/* 每日一言卡片 */
+.card {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 35px;
+    padding: 30px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(12px);
+    text-align: center;
+    margin: 20px 0;
+}
+
+.quote {
+    font-size: 22px;
+    line-height: 1.6;
+}
+
+/* 搜索框 */
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 35px;
+    padding: 10px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(12px);
+    margin: 10px;
+}
+
+.google-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.icon {
+    width: 28px;
+    height: 28px;
+    filter: invert(100%);
+    margin: 0 10px;
+}
+
+.search-box {
+    flex-grow: 1;
+    padding: 12px;
+    font-size: 18px;
+    border: none;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    backdrop-filter: blur(12px);
+}
+
+.search-box::placeholder {
+    color: #ddd;
+}
+
+.search-box:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.search-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.search-button img {
+    width: 28px;
+    height: 28px;
+    filter: invert(100%);
+}
+
+/* 移动设备适配 */
+@media (max-width: 768px) {
+    .time {
+        font-size: 40px;
+    }
+    .date {
+        font-size: 20px;
+    }
+    .card, .search-container {
+        width: 95%;
+        padding: 20px;
+    }
+    .icon {
+        width: 24px;
+        height: 24px;
+    }
+}

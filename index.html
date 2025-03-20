@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>每日一言</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<!-- 时间与日期 -->
+<div class="time-date">
+    <div class="time" id="time"></div>
+    <div class="date" id="date"></div>
+</div>
+
+<!-- 每日一言 -->
+<div class="card">
+    <div class="quote" id="quote">加载中...</div>
+</div>
+
+<!-- 搜索框 -->
+<div class="search-container">
+    <a href="https://www.google.com" target="_blank" class="google-link">
+        <img src="google.svg" alt="Google" class="icon">
+    </a>
+    <input type="text" class="search-box" placeholder="搜索..." id="search-input">
+    <button class="search-button" onclick="searchGoogle()">
+        <img src="search.svg" alt="Search" class="icon">
+    </button>
+</div>
+
+</body>
+</html>
